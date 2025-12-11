@@ -28,15 +28,17 @@ def get_animal_info():
             animal_type = animal["characteristics"].get("type", "")
 
             if animal_name != "":
-                output += f"Name: {animal_name}\n"
+                output += '<li class="cards__item">'
+                output += f"Name: {animal_name}<br/>\n"
             if animal_diet != "":
-                output += f"Diet: {animal_diet}\n"
+                output += f"Diet: {animal_diet}<br/>\n"
             if animal_location != "":
                 output += "Location: "
-                output += ', '.join(map(str, animal_location)) + "\n"
+                output += ', '.join(map(str, animal_location)) + "<br/>\n"
             if animal_type != "":
-                output += f"Type: {animal_type}\n"
-            output += "\n"
+                output += f"Type: {animal_type}<br/>\n"
+            output += "</li>\n"
+
     except FileNotFoundError:
         return None
     return output
@@ -55,3 +57,11 @@ def replace_animals_info():
 def generate_new_html_file(html_data):
     with open("animals.html", "w") as file_object:
         return file_object.write(html_data)
+
+
+def main():
+    replace_animals_info()
+
+
+if __name__ == "__main__":
+    main()
