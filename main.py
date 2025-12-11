@@ -1,4 +1,4 @@
-from Zootopia.data_handle.animal_data_handle import replace_animals_info
+from My_Zootopia.data_handle.animal_data_handle import replace_animals_info
 
 def main():
     """ Main function that calls the function that generates the html file."""

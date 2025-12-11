@@ -1,5 +1,5 @@
-from Zootopia.file_manage.html_file_handle import load_html_data, create_html_file
-from Zootopia.file_manage.json_file_handle import load_json_data
+from My_Zootopia.file_manage.html_file_handle import load_html_data, create_html_file
+from My_Zootopia.file_manage.json_file_handle import load_json_data
 
 def get_animal_info():
     """
